@@ -1,4 +1,18 @@
 {
+  "name": "my-eleventy-project",
+  "version": "1.0.0",
+  "description": "An Eleventy static site generator project",
+  "type": "module",
+  "keywords": [
+    "eleventy",
+    "ssg",
+    "static site generator"
+  ],
+  "author": "",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.1.8"
   }
