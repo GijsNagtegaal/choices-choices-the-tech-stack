@@ -1,5 +1,66 @@
 ---
-title: Mijn Eleventy Website
+layout: layouts/base.njk
+title: Air quality
+description: Explore street-level air quality measurements by city.
 ---
-# Welkom op mijn site!
-Dit is de startpagina.
+<main>
+  <section class="intro">
+    <article>
+      <h2>What does this site show?</h2>
+      <p>This platform helps residents, researchers, and policymakers understand air quality through reliable street-level measurements and clear insights.</p>
+    </article>
+
+    <article>
+      <h2>How to use it</h2>
+      <div class="how-to">
+        <ul class="icons" aria-hidden="true">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-4 8h8L7 7Zm10 0-4 8h8l-4-8ZM5 21h14"/></svg>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-5 5"/></svg>
+          </li>
+        </ul>
+        <ul class="texts">
+          <li>
+            <h3>Explore the map</h3>
+            <p>See air quality across the cities.</p>
+          </li>
+          <li>
+            <h3>Compare locations</h3>
+            <p>Find cleaner and more polluted areas.</p>
+          </li>
+          <li>
+            <h3>Read the air quality index</h3>
+            <p>Understand levels and take action.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <h2>Select the city you want info from</h2>
+
+  <section class="city-list" aria-label="Cities">
+    {% if citiesApi.length %}
+    <ul>
+      {% for city in citiesApi %}
+      <li>
+        <a href="/{{ city.slug }}/map/">
+          <div>
+            <h3>{{ city.name }}</h3>
+            <p>Africa</p>
+          </div>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No cities are currently available.</p>
+    {% endif %}
+  </section>
+</main>

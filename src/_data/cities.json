@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Nairobi",
+    "slug": "nairobi",
+    "region": "Africa"
+  },
+  {
+    "name": "Lagos",
+    "slug": "lagos",
+    "region": "Africa"
+  },
+  {
+    "name": "Accra",
+    "slug": "accra",
+    "region": "Africa"
+  }
+]
