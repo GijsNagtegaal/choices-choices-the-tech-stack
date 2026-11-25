@@ -193,6 +193,10 @@ article {
   height: 2rem;
 }
 
+.error {
+  color: var(--alert-text);
+}
+
 @media (max-width: 480px) {
   main {
     padding: var(--spacing-l);
